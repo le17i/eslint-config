@@ -1,0 +1,7 @@
+{
+  "name": "eslint",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Leandro Dias <ledias.17@gmail.com>",
+  "license": "MIT"
+}
