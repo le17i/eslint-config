@@ -4,7 +4,13 @@
     [
       "@semantic-release/commit-analyzer",
       {
-        "preset": "conventionalcommits"
+        "preset": "conventionalcommits",
+        "releaseRules": [
+          { "type": "chore", "release": "minor" },
+          { "type": "fix", "release": "minor" },
+          { "type": "perf", "release": "minor" },
+          { "type": "refactor", "release": "minor" }
+        ]
       }
     ],
     [
