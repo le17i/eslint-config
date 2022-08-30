@@ -1,21 +1,34 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
+    "ecmaFeatures": {
+      "jsx": true
+    },
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint/eslint-plugin"],
-  extends: [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "airbnb",
+  plugins: [
     "prettier",
+    "@typescript-eslint/eslint-plugin"
+  ],
+  extends: [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
     "plugin:node/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  ignorePatterns: [
+    "node_modules",
+    "build",
+    "dist",
+    "public"
   ],
   root: true,
   env: {
     browser: true,
     node: true,
-    jest: true,
+    es6: true,
+    jest: true
   },
   rules: {
     "@typescript-eslint/interface-name-prefix": "off",
@@ -23,8 +36,8 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "prettier/prettier": "error",
-    "no-unused-vars": "warn",
-    "no-console": "off",
+    "no-unused-vars": "error",
+    "no-console": "warn",
     "func-names": "off",
     "no-process-exit": "off",
     "object-shorthand": "off",
