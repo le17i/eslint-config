@@ -1,15 +1,9 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    "ecmaFeatures": {
-      "jsx": true
-    },
     sourceType: "module",
   },
-  plugins: [
-    "prettier",
-    "@typescript-eslint/eslint-plugin"
-  ],
+  plugins: ["@typescript-eslint/eslint-plugin"],
   extends: [
     "eslint:recommended",
     "plugin:prettier/recommended",
@@ -17,18 +11,14 @@ module.exports = {
     "airbnb",
     "plugin:@typescript-eslint/recommended",
   ],
-  ignorePatterns: [
-    "node_modules",
-    "build",
-    "dist",
-    "public"
-  ],
+  // eslint-disable-next-line quotes
+  ignorePatterns: ["node_modules", "build", "dist", "public"],
   root: true,
   env: {
     browser: true,
     node: true,
     es6: true,
-    jest: true
+    jest: true,
   },
   rules: {
     "@typescript-eslint/interface-name-prefix": "off",
@@ -36,6 +26,7 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "prettier/prettier": "error",
+    "quotes": ["error", "double"],
     "no-unused-vars": "error",
     "no-console": "warn",
     "func-names": "off",
