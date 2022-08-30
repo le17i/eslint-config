@@ -1,6 +1,6 @@
 {
   "name": "@le17i/eslint-config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "index.js",
   "author": "Leandro Dias <ledias.17@gmail.com>",
   "license": "MIT",
